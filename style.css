@@ -1,0 +1,96 @@
+/* Analysis and PDE Day at ASU: winter-desert palette, ASU maroon and gold accents. */
+
+:root{
+  --maroon:#8c1d40;
+  --maroon-dark:#6b1531;
+  --gold:#ffc627;
+  --gold-dark:#d9a400;
+  --ink:#1f2933;
+  --ink-soft:#4b5563;
+  --muted:#6b7a8c;
+  --sky:#dfe9f3;
+  --snow:#f7f4ee;
+  --paper:#ffffff;
+  --line:#d8dee6;
+  --max:1040px;
+  --serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--snow);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--maroon);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--maroon-dark)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0 0 .5em}
+h2{font-size:1.9rem;margin-top:0;padding-top:.2em;border-top:3px solid var(--gold);display:inline-block}
+h3{font-size:1.15rem;color:var(--maroon-dark);margin-top:1.2em}
+p{margin:0 0 1em;text-wrap:pretty}
+.container{max-width:var(--max);margin:0 auto;padding:0 24px}
+section{padding:48px 0}
+.note{color:var(--muted);font-size:.95rem}
+.todo{background:#fff3c4;box-shadow:0 0 0 3px #fff3c4;border-radius:2px}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:10;background:rgba(247,244,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 24px;flex-wrap:wrap}
+.brand{text-decoration:none;color:var(--ink);line-height:1.2}
+.brand-title{display:block;font-family:var(--serif);font-weight:600;font-size:1.05rem}
+.brand-sub{display:block;font-size:.8rem;color:var(--muted)}
+.nav{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.95rem;font-weight:500}
+.nav a{color:var(--ink-soft);text-decoration:none;padding:4px 2px;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--maroon);border-bottom-color:var(--gold)}
+.nav-cta{color:var(--paper)!important;background:var(--maroon);padding:5px 14px!important;border-radius:999px;border-bottom:none!important}
+.nav-cta:hover{background:var(--maroon-dark)}
+
+/* hero */
+.hero{padding:0;background:var(--sky)}
+.hero-art{line-height:0}
+.hero-art svg{width:100%;height:auto;max-height:360px;display:block}
+.hero-text{padding:36px 24px 48px}
+.eyebrow{font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;color:var(--maroon);font-weight:600;margin-bottom:.6em}
+.hero h1{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:.15em}
+.subtitle{font-family:var(--serif);font-size:1.5rem;color:var(--ink-soft);margin-bottom:1em}
+.lead{max-width:62ch;font-size:1.05rem}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:1.4em 0 1.2em}
+.hosted{color:var(--muted);font-size:.95rem}
+
+/* buttons */
+.button{display:inline-block;padding:10px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--maroon);color:var(--maroon);background:transparent}
+.button:hover{background:rgba(140,29,64,.08)}
+.button.primary{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.button.primary:hover{background:var(--gold-dark);border-color:var(--gold-dark)}
+
+/* speakers */
+.speakers{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.speakers li{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--maroon);border-radius:6px;padding:14px 16px}
+.speakers .name{display:block;font-family:var(--serif);font-size:1.15rem;font-weight:600}
+.speakers .inst{display:block;color:var(--muted);font-size:.9rem;margin-bottom:6px}
+.speakers .topic{display:block;font-size:.93rem;color:var(--ink-soft)}
+
+/* schedule */
+.schedule{list-style:none;padding:0;margin:0;background:var(--paper);border:1px solid var(--line);border-radius:6px}
+.schedule li{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:10px 16px;border-top:1px solid var(--line)}
+.schedule li:first-child{border-top:none}
+.schedule time{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:600;white-space:nowrap}
+.schedule strong{display:block;font-weight:600}
+.schedule span{display:block;color:var(--muted);font-size:.92rem}
+.schedule .talk{border-left:4px solid var(--maroon)}
+.schedule .break{background:#faf8f3}
+
+/* panels and columns */
+.panel{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:6px;padding:24px 28px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.two-col h3:first-child{margin-top:0}
+
+/* footer */
+.site-footer{border-top:1px solid var(--line);padding:28px 0 36px;color:var(--muted);font-size:.9rem;background:var(--sky)}
+
+/* responsive */
+@media (max-width:760px){
+  .two-col{grid-template-columns:1fr}
+  .schedule li{grid-template-columns:1fr;gap:2px}
+  .hero-art svg{max-height:200px}
+  h2{font-size:1.6rem}
+  section{padding:36px 0}
+}
